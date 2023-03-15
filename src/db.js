@@ -48,11 +48,11 @@ const { Brand, Cart, CartItem, Category, Location, Product, Users, UserFavorite,
 Category.hasMany(Product);
 Product.belongsTo(Category);
 
-Brand.hasMany(Product);
-Product.belongsTo(Brand);
+// Brand.hasMany(Product);
+// Product.belongsTo(Brand);
 
-Users.hasMany(Product);
-Product.belongsTo(Users);
+// Users.hasMany(Product);
+// Product.belongsTo(Users);
 
 Product.hasMany(CartItem);
 CartItem.belongsTo(Product);
