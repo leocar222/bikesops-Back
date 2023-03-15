@@ -28,11 +28,11 @@ const allProductsDB = async () => {
         model: Category,
         attributes: ["name"],
       },
-      {
-        model: Brand,
-        attributes: ["name"],
-      },
-      { model: Users, attributes: ["email"] },
+      // {
+      //   model: Brand,
+      //   attributes: ["name"],
+      // },
+      // { model: Users, attributes: ["email"] },
     ],
   });
 };
