@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY } = process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/ecommerce`, {
+const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/bikesops`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 });
@@ -48,11 +48,11 @@ const { Brand, Cart, CartItem, Category, Location, Product, Users, UserFavorite,
 Category.hasMany(Product);
 Product.belongsTo(Category);
 
-Brand.hasMany(Product);
-Product.belongsTo(Brand);
+// Brand.hasMany(Product);
+// Product.belongsTo(Brand);
 
-Users.hasMany(Product);
-Product.belongsTo(Users);
+// Users.hasMany(Product);
+// Product.belongsTo(Users);
 
 Product.hasMany(CartItem);
 CartItem.belongsTo(Product);
